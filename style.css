@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: #ffffff;
+    --txt-color: #323238;
+
+    --fill-fire: #9d23233b;
+    --fill-coffee: #8e9d233b;
+    --fill-forest: #239d343b;
+    --fill-rain: #237f9d3b;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--txt-color);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+#bg {
+    background: var(--bg-color);
+}
+
+#theme {
+    position: absolute;
+    right: 2.4rem;
+    top: -1.5rem;
+    cursor: pointer;
+}
+
+#timer {
+    font-size: clamp(10rem, 2rem + 10vw, 12.6rem);
+    line-height: 14.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0 4rem 4rem;
+}
+
+#controls .dark path {
+    fill: #C4C4CC;
+}
+
+#controls button:hover {
+    scale: 1.4;
+    transition: .3s;
+}
+
+#controls svg {
+    width: clamp(1rem, 1rem + 20vw, 4.0rem);
+}
+
+.hidden {
+    display: none;
+}
+
+#sounds {
+    display: grid;
+    grid-template-areas: "A E" "B F";
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1rem;
+}
+
+#sounds.dark path:nth-child(2) {
+    fill: #C4C4CC;
+}
+
+#sounds.dark path:nth-child(1) {
+    fill: #29292E;
+}
+
+#sounds button:hover {
+    scale: 1.02;
+    transition: .3s;
+}
+
+.fireplace path:nth-child(1):hover {
+    fill: var(--fill-fire);
+    transition: .3s;
+}
+
+.coffee path:nth-child(1):hover {
+    fill: var(--fill-coffee);
+    transition: .3s;
+}
+
+.forest path:nth-child(1):hover {
+    fill: var(--fill-forest);
+    transition: .3s;
+}
+
+.rain path:nth-child(1):hover {
+    fill: var(--fill-rain);
+    transition: .3s;
+}
+
+#sounds.dark .fireplace path:nth-child(1):hover {
+    fill: var(--fill-fire);
+    transition: .3s;
+}
+
+#sounds.dark .coffee path:nth-child(1):hover {
+    fill: var(--fill-coffee);
+    transition: .3s;
+}
+
+#sounds.dark .forest path:nth-child(1):hover {
+    fill: var(--fill-forest);
+    transition: .3s;
+}
+
+#sounds.dark .rain path:nth-child(1):hover {
+    fill: var(--fill-rain);
+    transition: .3s;
+}
+
+.fireplace.selected path:nth-child(1) {
+    fill: var(--fill-fire);
+    transition: .3s;
+}
+
+.coffee.selected path:nth-child(1) {
+    fill: var(--fill-coffee);
+    transition: .3s;
+}
+
+.forest.selected path:nth-child(1) {
+    fill: var(--fill-forest);
+    transition: .3s;
+}
+
+.rain.selected path:nth-child(1) {
+    fill: var(--fill-rain);
+    transition: .3s;
+}
+
+#sounds.dark .fireplace.selected path:nth-child(1) {
+    fill: var(--fill-fire);
+    transition: .3s;
+}
+
+#sounds.dark .coffee.selected path:nth-child(1) {
+    fill: var(--fill-coffee);
+    transition: .3s;
+}
+
+#sounds.dark .forest.selected path:nth-child(1) {
+    fill: var(--fill-forest);
+    transition: .3s;
+}
+
+#sounds.dark .rain.selected path:nth-child(1) {
+    fill: var(--fill-rain);
+    transition: .3s;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 96px;
+    height: 4px;
+    border-radius: 5px;
+    background: var(--txt-color);
+    cursor: pointer;
+    position: absolute;
+    left: 21px;
+    bottom: 16px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--txt-color);
+}
+
+button.forest,
+button.rain,
+button.coffee,
+button.fireplace {
+    position: relative;
+    height: 15.2rem;
+}
+
+input:hover {
+    scale: 1.02;
+    transition: .3s;
+}
+
+#sounds.dark input[type='range'] {
+    background: var(--bg-color);
+}
+
+#sounds.dark input[type='range']::-webkit-slider-thumb {
+    background: var(--bg-color);
+}
+
+/*---MediaQueries*/
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+        gap: 3.2rem;
+    }
+    #theme {
+        position: fixed;
+        right: 6.4rem;
+        top: 6.4rem;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        margin-top: 13%;
+        gap: 19.2rem;
+    }
+    #controls {
+        gap: 5.1rem;
+        margin: 2.2rem;
+    }
+    #sounds {
+        gap: 3.2rem;
+    }
+}
