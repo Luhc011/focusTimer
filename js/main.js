@@ -1,28 +1,33 @@
-import Sound from './sounds.js';
-import Timer from './timer.js';
-import Controls from './controls.js';
-import Events from './events.js';
-import toggleMode from './theme.js';
+const theme = document.querySelector('#toggle')
+
+theme.addEventListener('click', toggleMode)
+
+function toggleMode() {
+    const html = document.documentElement
+    html.classList.toggle('dark')
+}
+
+import Sound from './sounds.js'
+import Timer from './timer.js'
+import Events from './events.js'
+import Controls from './controls.js'
 import {
-    buttonPlay,
-    buttonPause,
-    buttonStop,
-    buttonIncrease,
-    buttonDecrease,
+    btnPlay,
+    btnPause,
+    btnStop,
+    btnVolumeUp,
+    btnVoumeDown,
     minutesDisplay,
-    secondsDisplay,
-    soundForest,
-    soundRain,
-    soundCoffee,
-    soundFireplace,
+    secondsDisplay
 } from './elements.js'
 
 
-const toggle = toggleMode()
-
 const controls = Controls({
-    buttonPlay,
-    buttonPause
+    btnPlay,
+    btnPause,
+    btnStop,
+    btnVolumeUp,
+    btnVoumeDown
 })
 
 const timer = Timer({
@@ -31,11 +36,6 @@ const timer = Timer({
     resetControls: controls.reset
 })
 
-const sound = Sound({
-    soundForest,
-    soundRain,
-    soundCoffee,
-    soundFireplace,
-})
+const sound = Sound()
 
-Events({controls, timer, sound})
+Events({ controls, timer, sound })
