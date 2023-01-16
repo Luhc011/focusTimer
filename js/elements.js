@@ -1,33 +1,45 @@
-const buttonPlay = document.getElementsByClassName('play');
-const buttonPause = document.getElementsByClassName('pause');
-const buttonStop = document.getElementsByClassName('stop');
-const buttonIncrease = document.getElementsByClassName('increase');
-const buttonDecrease = document.getElementsByClassName('decrease');
-const minutesDisplay = document.getElementsByClassName('minutes')
-const secondsDisplay = document.getElementsByClassName('seconds')
-const soundForest = document.getElementsByClassName('forest')
-const soundRain = document.getElementsByClassName('rain')
-const soundCoffee = document.getElementsByClassName('coffee')
-const soundFireplace = document.getElementsByClassName('fireplace')
-const sliderForest = document.getElementById('sliderForest')
-const sliderRain = document.getElementById('sliderRain')
-const sliderCoffee = document.getElementById('sliderCoffee')
-const sliderFireplace = document.getElementById('sliderFire')
+const btnPlay = document.querySelector('.play')
+const btnPause = document.querySelector('.pause')
+const btnStop = document.querySelector('.stop')
+const btnVolumeUp = document.querySelector('.increase')
+const btnVoumeDown = document.querySelector('.decrease')
+
+const minutesDisplay = document.querySelector('.minutes')
+const secondsDisplay = document.querySelector('.seconds')
+
+const btnForest = document.querySelector('.forest')
+const btnRain = document.querySelector('.rain')
+const btnCoffee = document.querySelector('.coffee')
+const btnFireplace = document.querySelector('.fireplace')
+
+const forestCard = document.querySelector('.containerForest')
+const rainCard = document.querySelector('.containerRain')
+const coffeeCard = document.querySelector('.containerCoffee')
+const fireplaceCard = document.querySelector('.containerFireplace')
+
+const sliderVolumeForest = document.getElementById('volumeForest')
+const sliderVolumeRain = document.getElementById('volumeRain')
+const sliderVolumeCoffee = document.getElementById('volumeCoffee')
+const sliderVolumeFireplace = document.getElementById('volumeFireplace')
 
 export {
-    buttonPlay,
-    buttonPause,
-    buttonStop,
-    buttonIncrease,
-    buttonDecrease,
+    btnPlay,
+    btnPause,
+    btnStop,
+    btnVolumeUp,
+    btnVoumeDown,
     minutesDisplay,
     secondsDisplay,
-    soundForest,
-    soundRain,
-    soundCoffee,
-    soundFireplace,
-    sliderForest,
-    sliderRain,
-    sliderCoffee,
-    sliderFireplace,
+    btnForest,
+    btnRain,
+    btnCoffee,
+    btnFireplace,
+    forestCard,
+    rainCard,
+    coffeeCard,
+    fireplaceCard,
+    sliderVolumeForest,
+    sliderVolumeRain,
+    sliderVolumeCoffee,
+    sliderVolumeFireplace
 }
