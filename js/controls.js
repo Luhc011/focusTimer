@@ -1,17 +1,23 @@
-export default function({buttonPlay, buttonPause}) {
+export default function Controls({
+    btnPlay,
+    btnPause,
+    btnStop
+}) {
     function play() {
-        buttonPlay.classList.add('hidden')
-        buttonPause.classList.remove('hidden')
+        btnPlay.classList.add('hiden')
+        btnPause.classList.remove('hiden')
+        btnStop.classList.remove('hiden')
     }
 
     function pause() {
-        buttonPlay.classList.remove('hidden')
-        buttonPause.classList.add('hidden')
+        btnPlay.classList.remove('hiden')
+        btnPause.classList.add('hiden')
     }
 
     function reset() {
-        buttonPlay.classList.remove('hidden')
-        buttonPause.classList.add('hidden')
+        btnPlay.classList.remove('hiden')
+        btnPause.classList.add('hiden')
+        btnStop.classList.add('hiden')
     }
 
     return {
